@@ -1,0 +1,1900 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #ffe6f2;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+  color: #ff4fa3;
+}
+
+.message {
+  font-size: 22px;
+  color: #555;
+}
+
+.start-button {
+  margin-top: 30px;
+  padding: 15px 40px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #ff7eb6;
+  color: white;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+}
+.quest-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.choice-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #ffb3d9;
+  color: #333;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.choice-button:hover {
+  background: #ff7eb6;
+  color: white;
+}
+.xp-card {
+  background: white;
+  width: 320px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+progress {
+  width: 100%;
+  height: 25px;
+}
+
+#xpText {
+  font-weight: bold;
+  color: #ff4fa3;
+}
+.add-quest-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+
+  border: 2px dashed #ff7eb6;
+  border-radius: 12px;
+
+  background: white;
+  color: #ff4fa3;
+
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.add-quest-button:hover {
+  background: #ffe6f2;
+}
+.add-quest-area {
+  margin-top: 15px;
+}
+
+.add-quest-area input {
+  padding: 10px;
+  border: 2px solid #ffb3d9;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.add-quest-area button {
+  margin-left: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7eb6;
+  color: white;
+  cursor: pointer;
+}
+.xp-bar {
+  width: 250px;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.xp-fill {
+  height: 100%;
+  background: #ff7eb6;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.xp-text {
+  margin-top: 10px;
+}
+
+.chick {
+  font-size: 50px;
+  margin: 10px;
+}
+.quest-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+/* 🏆 実績画面 */
+.achievement-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.achievement-count {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.achievement {
+  padding: 18px;
+  border-radius: 18px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.achievement:hover {
+  transform: translateY(-3px);
+}
+
+.achievement.unlocked {
+  background: #fff0f7;
+  border: 2px solid #ff9dcc;
+  box-shadow: 0 4px 10px rgba(255, 157, 204, 0.25);
+}
+
+.achievement.locked {
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  opacity: 0.65;
+}
+
+.achievement div {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.achievement small {
+  color: #666;
+}
+
+#back-achievements {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #ff9dcc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.achievement-progress {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.achievement.unlocked .achievement-progress {
+  color: #ff69a9;
+}
+
+.achievement.locked .achievement-progress {
+  color: #888;
+}
+.achievement-container h2 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.achievement-container h2:first-of-type {
+  background: #fff0f7;
+  color: #ff69a9;
+}
+
+.achievement-container h2:last-of-type {
+  background: #f5f5f5;
+  color: #777;
+}
+.achievement:active {
+  transform: scale(0.97);
+}
+.home-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.home-status div {
+  background: #fff0f7;
+  border-radius: 15px;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(255, 105, 169, 0.15);
+}
+.home-chick {
+  font-size: 70px;
+  text-align: center;
+  margin: 15px 0;
+  line-height: 1;
+}
+/* 🏆 実績カード */
+.achievement-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.achievement-count {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.achievement {
+  padding: 16px;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.achievement:hover {
+  transform: scale(1.02);
+}
+
+/* ✨ 達成済み */
+.achievement.unlocked {
+  background: #fff4a8;
+  border: 2px solid #ffd43b;
+  box-shadow: 0 4px 10px rgba(255, 200, 50, 0.25);
+}
+
+/* 🔒 未達成 */
+.achievement.locked {
+  background: #eeeeee;
+  border: 2px solid #cccccc;
+  opacity: 0.75;
+}
+
+.achievement small {
+  display: block;
+  margin-top: 6px;
+  color: #666;
+}
+
+.achievement-progress {
+  margin: 8px 0 0;
+  font-weight: bold;
+}
+
+.achievement-container h2 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+/* 🎮 ゲームホーム画面 */
+
+.home-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-chick {
+  font-size: 90px;
+  margin: 10px 0;
+  animation: chick-bounce 2s ease-in-out infinite;
+}
+
+.player-status {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 18px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(255, 150, 200, 0.2);
+}
+
+.level-display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.streak-display {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.home-container .start-button {
+  font-size: 20px;
+  padding: 15px 30px;
+  margin-bottom: 12px;
+  animation: start-glow 2s ease-in-out infinite;
+}
+
+@keyframes chick-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes start-glow {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}
+.start-animation {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.start-chick {
+  font-size: 100px;
+  animation: start-chick-jump 0.6s ease-in-out infinite alternate;
+}
+
+.start-animation h1 {
+  margin: 20px 0 10px;
+}
+
+.start-animation p {
+  font-size: 18px;
+}
+
+@keyframes start-chick-jump {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
+/* 🏆 実績解除ポップアップ */
+
+.achievement-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.achievement-popup.show {
+  opacity: 1;
+}
+
+.achievement-popup-content {
+  width: min(420px, 85%);
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+}
+
+.achievement-popup.show .achievement-popup-content {
+  transform: scale(1);
+}
+
+.achievement-popup-icon {
+  font-size: 70px;
+  animation: achievement-bounce 0.8s ease-in-out infinite alternate;
+}
+
+.achievement-popup h2 {
+  margin: 10px 0;
+}
+
+.achievement-popup h3 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.achievement-popup p {
+  margin: 0;
+  color: #666;
+}
+
+@keyframes achievement-bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-8px);
+  }
+}
+/* ⭐ XP獲得ポップアップ */
+
+.xp-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20px);
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4fa3;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.8s ease;
+}
+
+.xp-popup.show {
+  opacity: 1;
+  transform: translate(-50%, -80px);
+}
+/* 🎉 全クエスト達成ボーナス */
+
+.complete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 180, 220, 0.45);
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transition: opacity 0.3s ease;
+}
+
+.complete-popup.show {
+  opacity: 1;
+}
+
+.complete-popup-content {
+  width: min(430px, 85%);
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  transform: scale(0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.complete-popup.show
+.complete-popup-content {
+  transform: scale(1);
+}
+
+.complete-popup-icon {
+  font-size: 80px;
+
+  animation:
+    complete-bounce
+    0.6s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.complete-popup h2 {
+  margin: 15px 0 10px;
+
+  color: #ff4fa3;
+
+  font-size: 28px;
+}
+
+.complete-popup p {
+  margin: 10px 0;
+
+  color: #666;
+
+  font-size: 17px;
+}
+
+.complete-bonus {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #fff0f7;
+
+  color: #ff4fa3;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+@keyframes complete-bounce {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+
+}
+.complete-celebration {
+  font-size: 30px;
+  margin: 5px 0 10px;
+  animation: celebration-pop 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes celebration-pop {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+/* 🌅 ログインボーナス */
+
+.login-bonus-popup {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 220, 150, 0.35);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10000;
+
+  transition: opacity 0.3s ease;
+}
+
+.login-bonus-popup.show {
+  opacity: 1;
+}
+
+.login-bonus-content {
+  width: min(430px, 85%);
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  transform: scale(0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.login-bonus-popup.show
+.login-bonus-content {
+  transform: scale(1);
+}
+
+.login-bonus-icon {
+  font-size: 80px;
+
+  animation:
+    login-bonus-bounce
+    0.6s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.login-bonus-content h2 {
+  margin: 15px 0 10px;
+
+  color: #ff9d2e;
+
+  font-size: 28px;
+}
+
+.login-bonus-content p {
+  margin: 10px 0;
+
+  color: #666;
+
+  font-size: 17px;
+}
+
+.login-bonus-xp {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #fff4d6;
+
+  color: #ff9d2e;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+@keyframes login-bonus-bounce {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+
+}
+/* 🔥 streakボーナス */
+
+.streak-bonus-popup {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 170, 100, 0.35);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10001;
+
+  transition: opacity 0.3s ease;
+}
+
+.streak-bonus-popup.show {
+  opacity: 1;
+}
+
+.streak-bonus-content {
+  width: min(430px, 85%);
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  transform: scale(0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.streak-bonus-popup.show
+.streak-bonus-content {
+  transform: scale(1);
+}
+
+.streak-bonus-icon {
+  font-size: 85px;
+
+  animation:
+    streak-bonus-bounce
+    0.5s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.streak-bonus-content h2 {
+  margin: 15px 0 10px;
+
+  color: #ff6b35;
+
+  font-size: 28px;
+}
+
+.streak-bonus-content p {
+  margin: 10px 0;
+
+  color: #666;
+
+  font-size: 18px;
+}
+
+.streak-bonus-xp {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #fff0e6;
+
+  color: #ff6b35;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+@keyframes streak-bonus-bounce {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+
+}
+/* 🎁 デイリーチェスト */
+
+.chest-popup {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 220, 120, 0.4);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10002;
+
+  transition: opacity 0.3s ease;
+}
+
+.chest-popup.show {
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+.chest-content {
+  width: min(430px, 85%);
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  transform: scale(0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.chest-popup.show
+.chest-content {
+  transform: scale(1);
+}
+
+.chest-title {
+  font-size: 30px;
+
+  font-weight: bold;
+
+  color: #ff9d2e;
+
+  margin-bottom: 15px;
+}
+
+.chest-message {
+  font-size: 17px;
+
+  color: #666;
+
+  margin-bottom: 25px;
+}
+
+.chest-button {
+  padding: 15px 25px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #ffb347;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.chest-button:hover {
+  transform: scale(1.05);
+}
+
+.chest-button:active {
+  transform: scale(0.95);
+}
+
+.chest-open {
+  font-size: 90px;
+
+  animation:
+    chest-open-animation
+    0.5s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.chest-content h2 {
+  font-size: 28px;
+
+  color: #ff9d2e;
+}
+
+.chest-reward {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background: #fff4d6;
+
+  color: #ff9d2e;
+
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+@keyframes chest-open-animation {
+
+  from {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  to {
+    transform: scale(1.15) rotate(3deg);
+  }
+
+}
+/* 🎒 アイテム図鑑 */
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.item-card {
+  padding: 20px 10px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.item-card:hover {
+  transform: translateY(-3px);
+}
+
+.item-unlocked {
+  background: #fff4a8;
+  border: 2px solid #ffd43b;
+  box-shadow: 0 4px 10px rgba(255, 200, 50, 0.2);
+}
+
+.item-locked {
+  background: #eeeeee;
+  border: 2px solid #cccccc;
+  opacity: 0.65;
+}
+
+.item-icon {
+  font-size: 55px;
+  margin-bottom: 8px;
+}
+
+.item-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.item-status {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.equip-button {
+  margin-top: 10px;
+
+  padding: 8px 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ff9dcc;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.equip-button:hover {
+  transform: scale(1.05);
+
+  background: #ff7eb6;
+}
+
+.equip-button:active {
+  transform: scale(0.95);
+}
+/* 🐥 アイテム装備 */
+
+.chick-character {
+  position: relative;
+
+  width: 120px;
+  height: 130px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin: 10px auto;
+}
+
+.chick-body {
+  font-size: 90px;
+
+  line-height: 1;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* 🐥 装備アイテム */
+
+.chick-character {
+  position: relative;
+  width: 140px;
+  height: 150px;
+  margin: 10px auto;
+}
+
+.chick-body {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  font-size: 90px;
+  line-height: 1;
+  z-index: 1;
+}
+
+/* 🌸 お花 */
+.equipped-item.flower {
+  position: absolute;
+
+  top: 55px;
+  left: 82px;
+
+  font-size: 38px;
+
+  z-index: 3;
+
+  transform: rotate(-15deg);
+}
+
+/* 🎀 リボン */
+.equipped-item.ribbon {
+  position: absolute;
+
+  top: 105px;
+  left: 50%;
+
+  font-size: 35px;
+
+  z-index: 3;
+
+  transform: translateX(-50%);
+}
+
+/* 👒 帽子 */
+.equipped-item.hat {
+  position: absolute;
+
+  top: 20px;
+  left: 50%;
+
+  font-size: 55px;
+
+  z-index: 3;
+
+  transform: translateX(-50%);
+}
+
+/* 🕶️ サングラス */
+.equipped-item.sunglasses {
+  position: absolute;
+
+  top: 58px;
+  left: 50%;
+
+  font-size: 38px;
+
+  z-index: 3;
+
+  transform: translateX(-50%);
+}
+
+@keyframes item-float {
+
+  0%, 100% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      translateY(-4px);
+  }
+
+}
+/* 🎁 レア度 */
+
+.rarity-normal {
+  border-color: #9ad29a !important;
+}
+
+.rarity-rare {
+  border-color: #75aeea !important;
+}
+
+.rarity-super {
+  border-color: #b58be8 !important;
+  box-shadow: 0 0 12px rgba(160, 100, 220, 0.25);
+}
+
+.rarity-legend {
+  border-color: #f0c84b !important;
+  box-shadow: 0 0 18px rgba(240, 190, 50, 0.4);
+}
+/* 🎁 宝箱レア度演出 */
+
+.chest-open {
+  font-size: 80px;
+  margin: 15px;
+  text-align: center;
+}
+
+/* 🟢 ノーマル */
+
+.chest-normal {
+  animation: normal-item 1s ease-in-out;
+}
+
+/* 🔵 レア */
+
+.chest-rare {
+  animation: rare-item 1s ease-in-out;
+}
+
+/* 🟣 スーパーレア */
+
+.chest-super {
+  animation: super-item 1s ease-in-out;
+}
+
+/* 🟡 レジェンド */
+
+.chest-legend {
+  animation: legend-item 1s ease-in-out;
+}
+
+.rarity-result {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ノーマル */
+
+@keyframes normal-item {
+
+  0% {
+    transform: scale(0.5);
+  }
+
+  60% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+/* レア */
+
+@keyframes rare-item {
+
+  0% {
+    transform: scale(0.5);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+}
+
+/* スーパーレア */
+
+@keyframes super-item {
+
+  0% {
+    transform: scale(0.4);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+    filter: brightness(1.8);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+}
+
+/* レジェンド */
+
+@keyframes legend-item {
+
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    filter: brightness(1);
+  }
+
+  40% {
+    transform: scale(1.4) rotate(10deg);
+    filter: brightness(2);
+  }
+
+  70% {
+    transform: scale(1.2) rotate(-5deg);
+    filter: brightness(1.7);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+    filter: brightness(1);
+  }
+
+}
+/* 👑 レジェンド専用演出 */
+
+.legend-chest {
+  animation: legendary-screen 1.2s ease-in-out;
+}
+
+.legend-chest .chest-content {
+  border: 4px solid #f0c84b;
+  box-shadow:
+    0 0 15px rgba(255, 215, 80, 0.7),
+    0 0 40px rgba(255, 215, 80, 0.5),
+    0 0 80px rgba(255, 215, 80, 0.3);
+
+  animation: legendary-card 1.2s ease-in-out;
+}
+
+.legend-chest .chest-open {
+  animation:
+    legendary-item 1.2s ease-in-out infinite alternate;
+}
+
+.legend-chest h2 {
+  color: #d49b00;
+  font-size: 28px;
+  text-shadow:
+    0 0 8px rgba(255, 215, 80, 0.8);
+}
+
+.legend-chest .rarity-result {
+  color: #d49b00;
+  font-size: 22px;
+}
+
+/* 画面全体が一瞬光る */
+
+@keyframes legendary-screen {
+
+  0% {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  30% {
+    background: rgba(255, 220, 100, 0.75);
+  }
+
+  60% {
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+}
+
+/* カードが大きく登場 */
+
+@keyframes legendary-card {
+
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  75% {
+    transform: scale(0.97);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+/* アイテムが浮かぶ */
+
+@keyframes legendary-item {
+
+  from {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  to {
+    transform: scale(1.15);
+    filter: brightness(1.8);
+  }
+
+}
+/* 💎 重複アイテムのかけら */
+
+.duplicate-shard {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f0e6ff;
+  color: #7b4bb7;
+  font-weight: bold;
+  animation: shard-pop 0.5s ease;
+}
+
+@keyframes shard-pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* 🎒 アイテム一覧 */
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.inventory-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 15px;
+  background: #fff0f7;
+}
+
+.inventory-icon {
+  font-size: 40px;
+}
+
+.inventory-name {
+  flex: 1;
+  font-weight: bold;
+  text-align: left;
+}
+
+.inventory-rarity {
+  font-size: 13px;
+  color: #777;
+}
+.streak-container {
+  text-align: center;
+}
+
+.streak-card {
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: #fff0f7;
+}
+
+.streak-fire {
+  font-size: 70px;
+  margin-bottom: 5px;
+}
+
+.streak-number {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.streak-label {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.streak-message {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+.streak-week {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.streak-day {
+  width: 38px;
+  padding: 8px 4px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.streak-day.completed {
+  background: #fff0d6;
+}
+
+.streak-day.today {
+  outline: 3px solid #ffb6d9;
+}
+
+.weekday {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.day-icon {
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.day-number {
+  font-size: 12px;
+}
+.best-streak {
+  margin: 20px 0;
+  padding: 18px;
+  border-radius: 20px;
+  background: #fff8df;
+  text-align: center;
+}
+
+.best-streak-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.best-streak-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.week-progress {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.next-goal {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff0f7;
+  text-align: center;
+}
+
+.next-goal-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.next-goal-number {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.next-goal-message {
+  margin-top: 8px;
+  font-size: 16px;
+}
+.goal-progress-bar {
+  width: 100%;
+  height: 14px;
+  margin-top: 15px;
+  border-radius: 20px;
+  background: #ffe0ef;
+  overflow: hidden;
+}
+
+.goal-progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #ff8fbd;
+  transition: width 0.5s ease;
+}
+
+.goal-progress-percent {
+  margin-top: 6px;
+  font-weight: bold;
+}
+/* 🏆 ストリークマイルストーン */
+
+.milestones {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff0f7;
+}
+
+.milestones-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 10px;
+  padding: 14px 16px;
+
+  border-radius: 15px;
+  background: white;
+
+  box-shadow: 0 3px 8px rgba(255, 126, 182, 0.15);
+}
+
+.milestone-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.milestone-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* 🎮✨ Daily Quest ゲーム風アップデート */
+
+body {
+  background:
+    radial-gradient(circle at 20% 20%, #fff8fc 0 8%, transparent 9%),
+    radial-gradient(circle at 80% 15%, #fff4fa 0 7%, transparent 8%),
+    linear-gradient(135deg, #ffe6f2, #fff4fa);
+  color: #555;
+}
+
+/* 🏠 ホーム画面 */
+.home-container {
+  width: min(500px, 90%);
+  min-height: 90vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* 🐥 ひよこをふわっと目立たせる */
+.home-chick {
+  filter: drop-shadow(0 8px 8px rgba(255, 180, 210, 0.35));
+}
+
+/* 📊 プレイヤーステータス */
+.player-status {
+  width: min(360px, 90%);
+  box-sizing: border-box;
+  border: 2px solid #ffd1e5;
+  backdrop-filter: blur(5px);
+}
+
+/* ⭐ レベル表示 */
+.level-display {
+  color: #ff4fa3;
+  text-shadow: 0 2px 4px rgba(255, 79, 163, 0.15);
+}
+
+/* 💗 XPバー */
+.xp-bar {
+  width: 100%;
+  height: 24px;
+  background: #ffe1ee;
+  border: 3px solid white;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 100, 170, 0.12),
+    0 3px 8px rgba(255, 126, 182, 0.18);
+}
+
+.xp-fill {
+  background: linear-gradient(90deg, #ff8fbd, #ff4fa3);
+  box-shadow: 0 0 8px rgba(255, 79, 163, 0.35);
+}
+
+/* 🔥 ストリーク */
+.streak-display {
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: #fff4d6;
+  color: #ff7b35;
+  box-shadow: 0 3px 8px rgba(255, 170, 80, 0.15);
+}
+
+/* 🎮 スタートボタン */
+.home-container .start-button {
+  width: min(340px, 90%);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff8fbd, #ff4fa3);
+  box-shadow:
+    0 6px 0 #e83f91,
+    0 10px 20px rgba(255, 79, 163, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.home-container .start-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 9px 0 #e83f91,
+    0 14px 25px rgba(255, 79, 163, 0.3);
+}
+
+.home-container .start-button:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 3px 0 #e83f91,
+    0 6px 12px rgba(255, 79, 163, 0.2);
+}
+
+/* 🎮 メニューボタン */
+.home-container button:not(.start-button) {
+  border: 2px solid #ffd1e5;
+  border-radius: 15px;
+  background: white;
+  color: #ff4fa3;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 126, 182, 0.12);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.home-container button:not(.start-button):hover {
+  background: #fff0f7;
+  transform: translateY(-2px);
+}
+
+.home-container button:not(.start-button):active {
+  transform: scale(0.96);
+}
+
+/* 📋 クエストカード */
+.quest-card {
+  border: 2px solid #ffd6e8;
+  box-shadow:
+    0 8px 20px rgba(255, 126, 182, 0.15),
+    0 2px 0 white inset;
+}
+
+/* 🌱 選択ボタン */
+.choice-button {
+  background: linear-gradient(135deg, #ffd0e5, #ffb3d9);
+  font-weight: bold;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.choice-button:hover {
+  background: linear-gradient(135deg, #ff9dcc, #ff7eb6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 126, 182, 0.25);
+}
+
+.choice-button:active {
+  transform: scale(0.97);
+}
+
+/* ✨ クエスト項目 */
+.quest-item {
+  padding: 12px;
+  border-radius: 14px;
+  background: #fff7fb;
+  border: 1px solid #ffe0ed;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.quest-item:hover {
+  background: #fff0f7;
+  transform: translateX(3px);
+}
+
+.quest-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff69a9;
+  cursor: pointer;
+}
+
+/* 🏆 実績 */
+.achievement {
+  border-width: 2px;
+}
+
+.achievement.unlocked {
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement.unlocked::after {
+  content: "✨";
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 24px;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+/* 🎒 アイテムカード */
+.item-card {
+  box-shadow: 0 5px 12px rgba(255, 126, 182, 0.12);
+}
+
+.item-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* 🔥 ストリークカード */
+.streak-card {
+  border: 2px solid #ffd5b5;
+  box-shadow: 0 8px 20px rgba(255, 150, 80, 0.12);
+}
+
+/* 🎁 宝箱 */
+.chest-content {
+  border: 2px solid #ffe0a3;
+}
+
+/* 🏠 戻るボタン */
+#back-home,
+#back-achievements {
+  transition: transform 0.15s, background 0.15s;
+}
+
+#back-home:hover,
+#back-achievements:hover {
+  transform: translateY(-2px);
+}
+
+#back-home:active,
+#back-achievements:active {
+  transform: scale(0.96);
+}
+
+/* 📱 スマホでも崩れにくくする */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .home-container {
+    width: 94%;
+    padding: 20px 10px;
+  }
+
+  .quest-card,
+  .xp-card {
+    width: min(320px, 90%);
+  }
+
+  .home-chick {
+    font-size: 80px;
+  }
+
+  .item-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
